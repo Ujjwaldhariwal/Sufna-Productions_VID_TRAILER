@@ -11,7 +11,7 @@
 body {
 	margin: 0;
 	--color-text: #dc6e25;
-	--color-bg: #efded3;
+	background: radial-gradient(135deg, #338763, #117763, #0a5647);
 	--color-link: #000;
 	--color-link-hover: #dc6e25;
 	--aspect-ratio: 1/1.5;
@@ -25,21 +25,43 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-
-.demo-3 {
+::-webkit-scrollbar {
+	width: .1px; /* Set the width of the scrollbar */
+  }
+  
+  /* Firefox Scrollbar */
+  ::-moz-scrollbar {
+	width: .1px; /* Set the width of the scrollbar */
+  }
+  .demo-3 {
 	--color-text: #ffffff;
-	--color-bg: #117a65;
 	--color-link: #ffff00;
 	--color-link-hover: #fff;
-	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-family: "Playfair Display";
 	font-size: 1rem;
+	background-color: #0a5647;
+	background-image: linear-gradient(
+		#0a5647, /* Purple */
+		rgba(7, 7, 7, 0) /* Hot Pink */
+	),
+	repeating-linear-gradient(
+		35deg,
+		transparent,
+		transparent 10px,
+		#338763, /* Deep Pink */
+		rgb(183, 255, 75) /* Deep Pink with opacity */
+	);
 	--imgwidthmax: 400px;
 	--color-description: #ffffff;
 	--font-title: ivymode;
 	--size-title: 9vw;
 	--imgwidthmax: 600px;
 }
+
+
+
+
+
 
 
 
@@ -383,12 +405,11 @@ a:focus {
 }
 
 body {
-	font-family: primary, sans-serif;
+	font-family: sf;
   }
   
   .main_heading {
 	color: #fffbf1;
-	text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
 	font-size: 80px;
 	font-weight: bold;
 	text-decoration: none;
